@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  word
+//
+//  Created by nacker on 2017/6/7.
+//  Copyright © 2017年 帶頭二哥 QQ:648959. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+#define RGB(r,g,b,a)  [UIColor colorWithRed:r/255. green:g/255. blue:b/255. alpha:a]
+
+#define YouYouNormalFont @"PingFangSC-Regular"
+#define YouYouThinFont @"PingFangSC-Thin"
+#define YouYouBoldFont @"PingFangSC-Semibold"
+#define YouYouNavFont @"PingFangSC-Medium"
+
+//#import "Const.h"
+#import "MMMarkdown.h"
+#import "BYMarkdownKeyboard.h"
+#import "PreviewViewController.h"
+#import "HelpViewController.h"
+//#import "CustomAlertView.h"
+//#import "ThemeMenu.h"
+
+//NSString  * const defaultStyle = @"<link href='markdown.css' rel='stylesheet'></link>";
+//
+//NSString  * const whiteStyle = @"<link href='markdown-white.css' rel='stylesheet'></link>";
+//
+//NSString  * const blackStyle = @"<link href='markdown-black.css' rel='stylesheet'></link>";
+//
+//NSString  * const oldStyle = @"<link href='markdown-old.css' rel='stylesheet'></link>";
+
+#endif /* PrefixHeader_pch */

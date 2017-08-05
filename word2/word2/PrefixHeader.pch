@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  word2
+//
+//  Created by nacker on 2017/6/7.
+//  Copyright © 2017年 帶頭二哥 QQ:648959. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "CocoaLumberjack.h"
+#import "WPEditorViewController.h"
+//#import "WPLegacyEditorViewController.h
+#import "WPEditorFormatbarView.h"
+#import "WPStyleGuide.h"
+#import "WPFontManager.h"
+#import "WPEditorView.h"
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+#endif
+
+#ifdef DEBUG
+#define KLog(...) NSLog(__VA_ARGS__)
+#else
+#define KLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */

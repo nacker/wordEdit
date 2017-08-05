@@ -1,0 +1,85 @@
+//
+//  PrefixHeader.pch
+//  word3
+//
+//  Created by nacker on 2017/6/7.
+//  Copyright © 2017年 帶頭二哥 QQ:648959. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "CocoaLumberjack.h"
+#import "WPEditorViewController.h"
+//#import "WPLegacyEditorViewController.h
+//#import "WPEditorFormatbarView.h"
+#import "WPStyleGuide.h"
+#import "WPFontManager.h"
+#import "WPEditorView.h"
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+#endif
+
+#ifdef DEBUG
+#define KLog(...) NSLog(__VA_ARGS__)
+#else
+#define KLog(...)
+#endif
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+#import "WPEditorConfiguration.h"
+#import "TSLanguageManager.h"
+
+
+//@import "WordPressShared;
+//@import WordPressComAnalytics;
+//@import UIAlertView_Blocks;
+//@import WYPopoverController;
+
+#ifndef IS_IPAD
+#define IS_IPAD   ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+#endif
+#ifndef IS_IPHONE
+#define IS_IPHONE   (!IS_IPAD)
+#endif
+#ifndef IS_RETINA
+#define IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2)
+#endif
+
+#endif
+
+#define UIColorFromRGB(rgbValue)        [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#define CustomLocalisedString(key,description)    [TSLanguageManager localizedString:key]
+#define contains(str1, str2) ([str1 rangeOfString: str2 ].location != NSNotFound)
+
+
+#endif /* PrefixHeader_pch */
